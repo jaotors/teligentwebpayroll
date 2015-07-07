@@ -1,0 +1,90 @@
+body {
+  background-color: #F1F5F7; }
+
+.content-container {
+  background-color: #fff;
+  padding: 10px;
+  min-height: 530px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
+
+.content-container-title h3 {
+  margin-bottom: 25px; }
+
+.sub-container-title h4 {
+  text-align: center; }
+
+.input-span-default, .input-hold-md span.input-label, .input-hold-lg span.input-label {
+  display: inline-block;
+  width: 140px;
+  padding: 6px;
+  text-align: center;
+  background-color: #E5E5E5;
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-top-left-radius: 6px;
+  -ms-border-top-left-radius: 6px;
+  border-top-left-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -moz-border-bottom-left-radius: 6px;
+  -ms-border-bottom-left-radius: 6px;
+  border-bottom-left-radius: 6px; }
+
+.input-text-default, .input-hold-md input[type="text"], .input-hold-lg input[type="text"], .input-hold-lg select {
+  width: 123px;
+  padding: 5px;
+  border: 1px solid #E5E5E5;
+  margin-left: -8px;
+  text-align: center;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  border-radius: 6px; }
+
+.input-hold-md {
+  margin-bottom: 15px; }
+  .input-hold-md input[type="text"] {
+    -webkit-border-top-left-radius: 0px;
+    -moz-border-top-left-radius: 0px;
+    -ms-border-top-left-radius: 0px;
+    border-top-left-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -moz-border-bottom-left-radius: 0px;
+    -ms-border-bottom-left-radius: 0px;
+    border-bottom-left-radius: 0px; }
+  .input-hold-md input[type="text"].input-border {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    border-radius: 6px; }
+
+.input-hold-lg {
+  margin-bottom: 15px; }
+  .input-hold-lg span.input-label {
+    padding: 9px; }
+  .input-hold-lg input[type="text"] {
+    -webkit-border-top-left-radius: 0px;
+    -moz-border-top-left-radius: 0px;
+    -ms-border-top-left-radius: 0px;
+    border-top-left-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -moz-border-bottom-left-radius: 0px;
+    -ms-border-bottom-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    width: 200px;
+    padding: 8px; }
+  .input-hold-lg select {
+    width: 200px;
+    background-color: transparent;
+    padding: 9px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none; }
+
+/*# sourceMappingURL=template.css.map */
