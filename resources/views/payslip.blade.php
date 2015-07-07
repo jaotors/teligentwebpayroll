@@ -24,10 +24,12 @@
 	<header>
 		<nav>
 			<div class="navigation-wrapper">
+				<ul class="main-navigation">
+					<li><a href="">Home</a></li>
+				</ul>
 				<ul class="navigation">
-					<li>Home</li>
-					<li>Payroll Registry</li>
-					<li>Payroll Calculator</li>
+					<li><a href="">Payroll Registry</a></li>
+					<li><a href="">Payroll Calculator</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -241,6 +243,14 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+			<div class="row btn-wrapper">
+				<div class="btn-hold">
+					<a href="" class="box-right">Generate PDF</a>
+				</div>
+				<div class="btn-hold">
+					<a href="" class="box-left">Generate XLS</a>
 				</div>
 			</div>
 		</div>
