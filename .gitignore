@@ -2,4 +2,3 @@
 /node_modules
 .env
 resources/assets/sass/.sass-cache/
-*.css.map

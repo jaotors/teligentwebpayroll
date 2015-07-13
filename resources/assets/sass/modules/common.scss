@@ -51,18 +51,28 @@ body {
 	background-color: #F1F5F7;
 }
 
+main {
+	padding: 30px 0;
+}
+
 .content-container {
 	background-color: #fff;
 	padding: 10px;
-	min-height: 530px;
+	margin: 26px auto 10px;
 
 	@include border-radius(7px);
 	@include box-shadow(0px 0px 6px rgba(0, 0, 0, 0.3));
-
 }
 
-main {
-	padding: 30px 0;
+.custom-container {
+	margin: 26px auto 10px;
+
+	.input-container {
+
+		.input-hold-lg {
+			margin: 15px auto;
+		}
+	}
 }
 
 .content-container-title {
@@ -96,6 +106,7 @@ main {
 	text-align: center;
 	
 	@include border-radius(6px);
+
 }
 
 
@@ -112,6 +123,18 @@ main {
 		
 		@include border-top-left-radius(0px);
 		@include border-bottom-left-radius(0px);
+
+		@media (min-width: 992px) and (max-width: 1196px) {
+			width: 78px;
+		}
+
+		@media (min-width: 726px) and (max-width: 991px) {
+			width: 69%;
+		}
+
+		@media (min-width: 480px) and (max-width: 720px) {
+			width: 70%;
+		}
 	}
 
 	input[type="text"].input-border {
@@ -121,33 +144,53 @@ main {
 }
 
 .input-hold-lg {
-	margin-bottom: 15px;
+	margin: 30px auto;
 
 	span.input-label {
 		@extend .input-span-default;
-		
 		padding: 9px;
 	}
 
 	input[type="text"] {
 		@extend .input-text-default;
-
+		width: 200px;
 		@include border-top-left-radius(0px);
 		@include border-bottom-left-radius(0px);
 
-		width: 200px;
 		padding: 8px;
+		
+		@media (min-width: 992px) and (max-width: 1196px) {
+			width: 133px;
+		}
+
+		@media (min-width: 726px) and (max-width: 991px) {
+			width: 80%;
+		}
+
+		@media (min-width: 480px) and (max-width: 720px) {
+			width: 74%;
+		}
 	}
 
 	select {
 		@extend .input-text-default;
-		
 		width: 200px;
 		background-color: transparent;
 		padding: 9px;
 
 		@include appearance(none);
+		
+		@media (min-width: 992px) and (max-width: 1196px) {
+			width: 133px;
+		}
 
+		@media (min-width: 726px) and (max-width: 991px) {
+			width: 80%;
+		}
+
+		@media (min-width: 480px) and (max-width: 720px) {
+			width: 74%;
+		}
 
 	}
 }
@@ -164,14 +207,27 @@ main {
 		background-color: #8DE322;
 		color: #fff;
 	}
+
+	@media (max-width: 600px){
+		padding: 25px;
+		display: block;
+	}
 }
 
 .btn-wrapper {
-	margin: 60px auto 30px;
+	margin: 30px auto 30px;
 	.btn-hold {
 		float: right;
 		display: inline-block;
 		margin: 0 -3px;
+		text-transform: uppercase;
+		
+		@media (max-width: 600px){
+			float: none;
+			display: block;
+			margin: 10px auto;
+			text-align: center;
+		}
 
 		a.box-left {
 			@extend .btn-default;
@@ -179,6 +235,11 @@ main {
 			@include border-top-left-radius(6px);
 			@include border-bottom-left-radius(6px);
 			@include box-shadow(-3px 2px 3px rgba(0, 0, 0, 0.3));
+
+			@media (max-width: 600px){
+				@include box-shadow(0px 0px 3px rgba(0, 0, 0, 0.3));
+				@include border-radius(6px);
+			}
 		}
 
 		a.box-right {
@@ -187,6 +248,11 @@ main {
 			@include border-top-right-radius(6px);
 			@include border-bottom-right-radius(6px);
 			@include box-shadow(3px 2px 3px rgba(0, 0, 0, 0.3));
+
+			@media (max-width: 600px){
+				@include box-shadow(0px 0px 3px rgba(0, 0, 0, 0.3));
+				@include border-radius(6px);
+			}
 		}
 	}
 
@@ -194,5 +260,40 @@ main {
 		content: ' ';
 		display: block;
 		clear: both;
+	}
+}
+
+/* classes that have names (class="var") */
+.payslip-calc {
+
+	.input-hold-md {
+		
+		input[type="text"] {
+
+			@media (min-width: 726px) and (max-width: 991px) {
+				width: 80%;
+			}
+		}
+	}
+
+	.ot-hold {
+		.input-hold-md {
+		
+			input[type="text"] {
+
+				@media (min-width: 726px) and (max-width: 991px) {
+					width: 69%;
+				}
+
+				@media (max-width: 725px) {
+						width: 75%;
+				}
+
+				&.input-border {
+					width: 100%;
+					margin-left: 0;
+				}
+			}
+		}
 	}
 }

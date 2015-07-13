@@ -29,7 +29,7 @@
 				</ul>
 				<ul class="navigation">
 					<li><a href="">Payroll Registry</a></li>
-					<li><a href="">Payroll Calculator</a></li>
+					<li><a href="">Payslip Calculator</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -40,10 +40,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
-					<div class="content-container">
-					<div class="content-container-title">
-						<h3>Payslip Information</h3>
-					</div>
+					<div class="content-container payroll-info">
+						<div class="content-container-title">
+							<h3>Payslip Information</h3>
+						</div>
 						<div class="input-container">
 							<div class="input-hold-lg">
 								<span class="input-label">Company Name</span>
@@ -81,7 +81,7 @@
 					</div>
 				</div>
 				<div class="col-md-8">
-					<div class="content-container">
+					<div class="content-container payslip-calc">
 						<div class="content-container-title">
 							<h3>Payslip Calculation</h3>
 						</div>
@@ -126,83 +126,83 @@
 									</div>
 									<div class="col-xs-4">
 										<div class="input-hold-title">
-											<h5>Values (PHP)</h5>
+											<h5 class="hidden-xs">Values (PHP)</h5>
 										</div>
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-xs-8">
+									<div class="col-sm-8">
 										<div class="input-hold-md">
 											<span class="input-label">Regular Pay</span>
 											<input type="text">
 										</div>
 									</div>
-									<div class="col-xs-4">
+									<div class="col-sm-4">
 										<div class="input-hold-md">
 											<input type="text" class="input-border">
 										</div>
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-xs-8">
+									<div class="col-sm-8">
 										<div class="input-hold-md">
 											<span class="input-label">&gt; 8 Hours</span>
 											<input type="text">
 										</div>
 									</div>
-									<div class="col-xs-4">
+									<div class="col-sm-4">
 										<div class="input-hold-md">
 											<input type="text" class="input-border">
 										</div>
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-xs-8">
+									<div class="col-sm-8">
 										<div class="input-hold-md">
 											<span class="input-label">Night Diff</span>
 											<input type="text">
 										</div>
 									</div>
-									<div class="col-xs-4">
+									<div class="col-sm-4">
 										<div class="input-hold-md">
 											<input type="text" class="input-border">
 										</div>
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-xs-8">
+									<div class="col-sm-8">
 										<div class="input-hold-md">
 											<span class="input-label">&gt; 8 Hours ND</span>
 											<input type="text">
 										</div>
 									</div>
-									<div class="col-xs-4">
+									<div class="col-sm-4">
 										<div class="input-hold-md">
 											<input type="text" class="input-border">
 										</div>
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-xs-8">
+									<div class="col-sm-8">
 										<div class="input-hold-md">
 											<span class="input-label">Holiday</span>
 											<input type="text">
 										</div>
 									</div>
-									<div class="col-xs-4">
+									<div class="col-sm-4">
 										<div class="input-hold-md">
 											<input type="text" class="input-border">
 										</div>
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-xs-8">
+									<div class="col-sm-8">
 										<div class="input-hold-md">
 											<span class="input-label">Special Holiday</span>
 											<input type="text">
 										</div>
 									</div>
-									<div class="col-xs-4">
+									<div class="col-sm-4">
 										<div class="input-hold-md">
 											<input type="text" class="input-border">
 										</div>
@@ -216,7 +216,7 @@
 								<div class="row">
 									<div class="col-md-12">
 										<div class="input-hold-title">
-											<h5>Values (PHP)</h5>
+											<h5 class="hidden-xs">Values (PHP)</h5>
 										</div>
 										<div class="input-hold-md">
 											<span class="input-label">SSS</span>
@@ -234,10 +234,34 @@
 											<span class="input-label">Adjustments</span>
 											<input type="text">
 										</div>
-										<div class="input-hold-md">
-											<span class="input-label">Total Deductions</span>
-											<input type="text">
-										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content-container custom-container">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="input-container">
+									<div class="input-hold-lg">
+										<span class="input-label">Total OT Pay</span>
+										<input type="text">
+									</div>
+									<div class="input-hold-lg">
+										<span class="input-label">Gross Pay</span>
+										<input type="text">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="input-container">
+									<div class="input-hold-lg">
+										<span class="input-label">Deductions</span>
+										<input type="text">
+									</div>
+									<div class="input-hold-lg">
+										<span class="input-label">Net Pay</span>
+										<input type="text">
 									</div>
 								</div>
 							</div>
@@ -247,10 +271,10 @@
 			</div>
 			<div class="row btn-wrapper">
 				<div class="btn-hold">
-					<a href="" class="box-right">Generate PDF</a>
+					<a href="" class="box-right">Generate XLS</a>
 				</div>
 				<div class="btn-hold">
-					<a href="" class="box-left">Generate XLS</a>
+					<a href="" class="box-left">Generate PDF</a>
 				</div>
 			</div>
 		</div>
