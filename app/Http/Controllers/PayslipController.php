@@ -2,8 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
-use Illuminate\Http\Request;
+use Request;
 
 class PayslipController extends Controller {
 
@@ -15,6 +14,24 @@ class PayslipController extends Controller {
 	public function index()
 	{
 		return view('payslip');
+	}
+
+	public function generateExcelFile() 
+	{
+		$excel = \App::make('excel');
+		$inputs = Request::all();
+		
+		/*echo "<pre>";
+		print_r($inputs);
+		echo "</pre>";die;*/
+
+		$excel->create('Test Xlsx', function($ex) use ($inputs) {
+
+			$ex->sheet('Test Sheet', function($sheet) use ($inputs) {
+			    $sheet->loadView('excel.generatepayslip', array('input' => $inputs));
+			});
+
+		})->download('xlsx');
 	}
 
 }

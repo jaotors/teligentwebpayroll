@@ -177,8 +177,6 @@ main {
 		width: 200px;
 		background-color: transparent;
 		padding: 9px;
-
-		@include appearance(none);
 		
 		@media (min-width: 992px) and (max-width: 1196px) {
 			width: 133px;
@@ -202,6 +200,7 @@ main {
 	color: #000;
 	font-weight: 400;
 	outline: 0;
+	border: none;
 
 	&:hover {
 		background-color: #8DE322;
@@ -221,7 +220,7 @@ main {
 		display: inline-block;
 		margin: 0 -3px;
 		text-transform: uppercase;
-		
+
 		@media (max-width: 600px){
 			float: none;
 			display: block;
@@ -229,7 +228,7 @@ main {
 			text-align: center;
 		}
 
-		a.box-left {
+		.box-left {
 			@extend .btn-default;
 
 			@include border-top-left-radius(6px);
@@ -242,7 +241,7 @@ main {
 			}
 		}
 
-		a.box-right {
+		.box-right {
 			@extend .btn-default;
 
 			@include border-top-right-radius(6px);
