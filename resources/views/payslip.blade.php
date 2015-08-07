@@ -38,7 +38,7 @@
 
 	<!-- MAIN CONTENTS or etc goes here -->
 	<main>
-		{!! Form::open(['url' => 'generateexcelpayslip']) !!}
+		{!! Form::open(['url' => 'generatepdfpayslip']) !!}
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4">

@@ -34,4 +34,18 @@ class PayslipController extends Controller {
 		})->download('xlsx');
 	}
 
+	public function generatePdfFile()
+	{
+		$excel = \App::make('excel');
+		$inputs = Request::all();
+		
+		$excel->create('Test Xlsx', function($ex) use ($inputs) {
+
+			$ex->sheet('Test Sheet', function($sheet) use ($inputs) {
+			    $sheet->loadView('excel.generatepayslip', array('input' => $inputs));
+			});
+
+		})->export('pdf');
+	}
+
 }
