@@ -12,8 +12,7 @@
 */
 
 Route::get('/', 'PayslipController@index');
-Route::post('/generateexcelpayslip', 'PayslipController@generateExcelFile');
-Route::post('/generatepdfpayslip', 'PayslipController@generatePdfFile');
+Route::post('/generatepayslip', 'PayslipController@generateFile');
 
 Route::get('home', 'HomeController@index');
 

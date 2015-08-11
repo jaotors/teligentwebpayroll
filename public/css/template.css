@@ -43,7 +43,7 @@ main {
   -ms-border-bottom-left-radius: 6px;
   border-bottom-left-radius: 6px; }
 
-.input-text-default, .input-hold-md input[type="text"], .input-hold-lg input[type="text"], .input-hold-lg select {
+.input-text-default, .input-hold-md input[type="text"], .input-hold-lg input[type="text"], .input-hold-lg select, .btn-wrapper .btn-hold select {
   width: 123px;
   padding: 5px;
   border: 1px solid #E5E5E5;
@@ -118,28 +118,27 @@ main {
       .input-hold-lg select {
         width: 74%; } }
 
-.btn-default, .btn-wrapper .btn-hold .box-left, .btn-wrapper .btn-hold .box-right {
+.btn-default, .btn-wrapper .btn-hold .box-left, .btn-wrapper .btn-hold .box-right, .btn-wrapper .btn-hold .box-whole {
   background-color: #fff;
-  padding: 25px 50px;
+  padding: 15px 50px;
   text-decoration: none;
   color: #000;
   font-weight: 400;
   outline: 0;
   border: none; }
-  .btn-default:hover, .btn-wrapper .btn-hold .box-left:hover, .btn-wrapper .btn-hold .box-right:hover {
+  .btn-default:hover, .btn-wrapper .btn-hold .box-left:hover, .btn-wrapper .btn-hold .box-right:hover, .btn-wrapper .btn-hold .box-whole:hover {
     background-color: #8DE322;
     color: #fff; }
   @media (max-width: 600px) {
-    .btn-default, .btn-wrapper .btn-hold .box-left, .btn-wrapper .btn-hold .box-right {
+    .btn-default, .btn-wrapper .btn-hold .box-left, .btn-wrapper .btn-hold .box-right, .btn-wrapper .btn-hold .box-whole {
       padding: 25px;
       display: block; } }
 
 .btn-wrapper {
-  margin: 30px auto 30px; }
+  margin: 30px auto 30px;
+  position: relative; }
   .btn-wrapper .btn-hold {
-    float: right;
     display: inline-block;
-    margin: 0 -3px;
     text-transform: uppercase; }
     @media (max-width: 600px) {
       .btn-wrapper .btn-hold {
@@ -193,6 +192,37 @@ main {
           -moz-border-radius: 6px;
           -ms-border-radius: 6px;
           border-radius: 6px; } }
+    .btn-wrapper .btn-hold .box-whole {
+      position: absolute;
+      right: 0;
+      width: 200px;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      border-radius: 6px;
+      -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+      -ms-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
+      @media (min-width: 480px) and (max-width: 720px) {
+        .btn-wrapper .btn-hold .box-whole {
+          position: static;
+          width: 100%; } }
+    .btn-wrapper .btn-hold select {
+      width: 200px;
+      background-color: #fff;
+      padding: 15px;
+      position: absolute;
+      right: 210px;
+      -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+      -ms-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
+      @media (min-width: 480px) and (max-width: 720px) {
+        .btn-wrapper .btn-hold select {
+          position: static;
+          width: 100%;
+          margin-left: 0; } }
   .btn-wrapper::after {
     content: ' ';
     display: block;

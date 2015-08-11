@@ -38,7 +38,7 @@
 
 	<!-- MAIN CONTENTS or etc goes here -->
 	<main>
-		{!! Form::open(['url' => 'generatepdfpayslip']) !!}
+		{!! Form::open(['url' => 'generatepayslip']) !!}
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4">
@@ -61,11 +61,11 @@
 								</div>
 								<div class="input-hold-lg">
 									<span class="input-label">Employee Type</span>
-									{!! Form::select('employeetype', ['regular' => 'Regular','contractual' => 'Contractual']) !!}
+									{!! Form::select('employeetype', ['Regular' => 'Regular','Contractual' => 'Contractual']) !!}
 								</div>
 								<div class="input-hold-lg">
 									<span class="input-label">Payslip Type</span>
-									{!! Form::select('paysliptype') !!}
+									{!! Form::select('paysliptype', ['Monthly' => 'Monthly', 'Semi-Monthly' => 'Semi-Monthly']) !!}
 								</div>
 								<div class="input-hold-lg">
 									<span class="input-label">Start Date</span>
@@ -221,6 +221,10 @@
 												<h5 class="hidden-xs">Values (PHP)</h5>
 											</div>
 											<div class="input-hold-md">
+												<span class="input-label">Loss Hours</span>
+												{!! Form::text('losshours') !!}
+											</div>
+											<div class="input-hold-md">
 												<span class="input-label">SSS</span>
 												{!! Form::text('sss') !!}
 											</div>
@@ -273,10 +277,10 @@
 				</div>
 				<div class="row btn-wrapper">
 					<div class="btn-hold">
-						{!! Form::submit('Generate XLS', ['class'=>'box-right']) !!}
+						{!! Form::select('generatetype', ['xls' => 'Excel','pdf' => 'PDF']) !!}
 					</div>
 					<div class="btn-hold">
-						{!! Form::submit('Generate PDF', ['class'=>'box-left']) !!}
+						{!! Form::submit('Generate', ['class'=>'box-whole']) !!}
 					</div>
 				</div>
 			</div>

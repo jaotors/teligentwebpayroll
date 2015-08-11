@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Request;
+use PDF;
 
 class PayslipController extends Controller {
 
@@ -16,7 +17,7 @@ class PayslipController extends Controller {
 		return view('payslip');
 	}
 
-	public function generateExcelFile() 
+	public function generateFile() 
 	{
 		$excel = \App::make('excel');
 		$inputs = Request::all();
@@ -25,27 +26,29 @@ class PayslipController extends Controller {
 		print_r($inputs);
 		echo "</pre>";die;*/
 
-		$excel->create('Test Xlsx', function($ex) use ($inputs) {
+		if ($inputs['generatetype'] == 'xls') {
+			$excel->create('Test Xlsx', function($ex) use ($inputs) {
+				$ex->sheet('Test Sheet', function($sheet) use ($inputs) {
+				    $sheet->loadView('reports.excel.generateexcelpayslip', array('input' => $inputs));
+				});
+			})->download('xlsx');
 
-			$ex->sheet('Test Sheet', function($sheet) use ($inputs) {
-			    $sheet->loadView('excel.generatepayslip', array('input' => $inputs));
-			});
+		} else {
+			/*$html = 
+			  '<html><body>'.
+			  '<p>Put your html here, or generate it with your favourite '.
+			  'templating system.</p>'.
+			  '</body></html>';
 
-		})->download('xlsx');
-	}
+			$dompdf = new DOMPDF();
+			$dompdf->load_html($html);
+			$dompdf->render();
+			$dompdf->stream("sample.pdf");*/
+			
+			$pdf = PDF::loadView('reports.pdf.generatepdfpayslip' , $inputs);
+			return $pdf->stream();
 
-	public function generatePdfFile()
-	{
-		$excel = \App::make('excel');
-		$inputs = Request::all();
-		
-		$excel->create('Test Xlsx', function($ex) use ($inputs) {
-
-			$ex->sheet('Test Sheet', function($sheet) use ($inputs) {
-			    $sheet->loadView('excel.generatepayslip', array('input' => $inputs));
-			});
-
-		})->export('pdf');
+		}
 	}
 
 }
